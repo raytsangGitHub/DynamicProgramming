@@ -1,0 +1,22 @@
+﻿
+Make it work by brute force
+	Understand what the problem is asking for.
+	come up some assumptions. like all numbers are positives, etc.
+	Visualize the problem as a recursive tree, draw out the recursive tree, find the base case at the leaf level.
+	Implement the tree using recursion
+	Test it - with large value see what the performance. 
+	Explain the complexity: time and space
+
+Improve effiecient: Follow the brute force (above) approach but add Memoization.
+	Add a memo object
+	add a base case to return memo values
+	store return values into the memo
+	Test it - see the performance with large values
+	Explain the complexity improvments in big O notation.
+
+What are the basics of Dynamic programming?
+1. Break down a problem into smaller subproblems.
+2. Solve each subproblem independently.
+3. Store the solutions to subproblems to avoid redundant computation.
+4. Use the solutions to the subproblems to construct the overall solution.
+5. Use the principle of optimality to ensure that the solution is optimal.
