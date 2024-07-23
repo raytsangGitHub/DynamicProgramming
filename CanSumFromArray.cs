@@ -15,6 +15,7 @@ namespace DynamicProgramming
     /// </summary>
     public static class CanSumFromArray
     {
+        //this implementation moved to the Sum folder for DI purpose. make the project clearner.
         public static bool canSum(int targetSum, int[] arrayNum, Dictionary<int, bool> memo)
         {
             //memoization
