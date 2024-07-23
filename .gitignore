@@ -1,2 +1,4 @@
 # Ignore the .vs directory used by Visual Studio
 .vs/
+.bin/
+.obj/
