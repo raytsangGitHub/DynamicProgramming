@@ -8,6 +8,9 @@ namespace DynamicProgramming.Sum
 {
     public class CanSum : ICanSum
     {
-        
+        public int Sum(int[] num, int target)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
