@@ -6,10 +6,11 @@
     /// assumption:
     /// the number in the array are positive, and the target number is also positive.
     /// be able to use the numbers in the array as many time as needed.
-    /// </summary>
+    /// </summary>  
+
     public static class CanSumFromArray
     {
-        //this implementation moved to the Sum folder for DI purpose. make the project clearner.
+        // this implementation moved to the Sum folder for DI purpose. make the project clearner.
         public static bool canSum(int targetSum, int[] arrayNum, Dictionary<int, bool> memo)
         {
             //memoization
