@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 
 namespace DynamicProgramming.Word
 {
@@ -17,8 +12,9 @@ namespace DynamicProgramming.Word
         }
 
         //test data:
-        Dictionary<string, bool> memo = new();
-        Stopwatch stopwatch = new Stopwatch();
+        private Dictionary<string, bool> memo = new();
+
+        private Stopwatch stopwatch = new Stopwatch();
 
         public void accessWordBreak()
         {
@@ -33,4 +29,3 @@ namespace DynamicProgramming.Word
         }
     }
 }
-

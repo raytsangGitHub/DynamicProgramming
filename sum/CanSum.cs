@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DynamicProgramming.Sum
+﻿namespace DynamicProgramming.Sum
 {
     public class CanSum : ICanSum
     {

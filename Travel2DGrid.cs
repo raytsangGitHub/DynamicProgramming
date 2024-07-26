@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DynamicProgramming
+﻿namespace DynamicProgramming
 {
     public class Travel2DGrid : FibBase
     {
@@ -19,13 +13,12 @@ namespace DynamicProgramming
             //the base case for a 1x1 grid, only one way the start is the end.
             if (n == 1 && m == 1) return 1;
             //invalid grid if either n or m equal 0
-            if ((n == 0) || (m == 0)) 
+            if ((n == 0) || (m == 0))
                 return 0;
 
             return GridTravler(m - 1, n) + GridTravler(m, n - 1);
         }
 
-        
         /// <summary>
         /// Memoization approach, performance is improved. Time O(m*n), Space O(n+m)
         /// </summary>

@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DynamicProgramming.Word
+﻿namespace DynamicProgramming.Word
 {
     public class WordBreak_139 : IWordBreak
     {
@@ -15,7 +8,7 @@ namespace DynamicProgramming.Word
             if (memo.ContainsKey(target)) { return memo[target]; }
             //this logic will return incorrect value if the initial target is empty?
             //The answer: an empty string can be generate from any give string[]. therefore the below code will do the trick. so its not a problem.
-            if (target == "") { return true; }  
+            if (target == "") { return true; }
 
             foreach (string word in wordDict)
             {
@@ -59,10 +52,5 @@ namespace DynamicProgramming.Word
             }
             return false;
         }
-
     }
-
-
-    
 }
-

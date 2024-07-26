@@ -1,9 +1,5 @@
 ﻿using DynamicProgramming.Word;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Threading;
 
 namespace DynamicProgramming
 {
@@ -20,14 +16,12 @@ namespace DynamicProgramming
                 .AddScoped<AccessDynamicProblem>()
                 .BuildServiceProvider();
 
-
             var serviceRef = serviceDP.GetService<AccessDynamicProblem>();
             serviceRef.accessDP();
 
-            #endregion
+            #endregion DI container
 
-
-            #region  Word dp problems
+            #region Word dp problems
             var serviceWordBreak = new ServiceCollection()
                .AddScoped<IWordBreak>(x => new WordBreak_139())
                //.AddScoped<FibBase>(x => new FibWithMemo())
@@ -36,14 +30,10 @@ namespace DynamicProgramming
                .AddScoped<AccessWordProblem>()
                .BuildServiceProvider();
 
-
             var serviceWord = serviceWordBreak.GetService<AccessWordProblem>();
 
             serviceWord.accessWordBreak();
-            #endregion
-
-
-
+            #endregion Word dp problems
 
             //the first two fibonacci serier is 1. f(0)=1, f(1)=1.
             //    #region Fibonacci sequence test no memo
@@ -56,7 +46,7 @@ namespace DynamicProgramming
             //    #endregion
 
             //    #region Fibonacci sequence test with memo
-            //    var memo  = new Dictionary<int, long>();  //note: to calculate large number, a long type is needed 
+            //    var memo  = new Dictionary<int, long>();  //note: to calculate large number, a long type is needed
             //   //Console.WriteLine(FibMemo(4, memo));  //expected 3
             //   // Console.WriteLine(Fib(7));//13
             //   // Console.WriteLine(FibMemo(0, memo)); //0
@@ -81,17 +71,17 @@ namespace DynamicProgramming
             {
                 Console.Write($"{x},");
             }
-            Console.WriteLine(  );
+            Console.WriteLine();
             foreach (var t in input)
             {
                 //Console.Write($"{t}");
                 uint resultTab = tabulation.FibTabu(t);
                 Console.Write($"{resultTab},");
             }
-           //uint t = 9;
-            
+            //uint t = 9;
+
             Console.WriteLine();
-            #endregion
+            #endregion Fib sequence Tabulation
 
             //    #region travel a 2D grid
             //    //var memo = new Dictionary<string, long>();
@@ -104,7 +94,7 @@ namespace DynamicProgramming
             //    #region canSum
             //    // var numb = new int[] { };
             //    var memo1 = new Dictionary<int, bool>();
-            //    // bool result = CanSumFromArray.canSum(7, new int[] { 2, 3 });  
+            //    // bool result = CanSumFromArray.canSum(7, new int[] { 2, 3 });
             //    // Console.WriteLine(CanSumFromArray.canSum(7, new int[] { 2, 3 })); //true
             //    Console.WriteLine(CanSumFromArray.canSum(7, new int[] { 5, 3, 4, 7 }, memo1)); //true
             //    memo1.Clear();
@@ -113,11 +103,7 @@ namespace DynamicProgramming
             //    memo1.Clear();
             //    Console.WriteLine(CanSumFromArray.canSum(300, new int[] { 7, 14 }, memo1)); //false
 
-
-
             //    #endregion
-
-
 
             //}
             //#region Fibonacci sequence
@@ -134,7 +120,7 @@ namespace DynamicProgramming
             //    return Fib(n - 1) + Fib(n - 2);
             //}
             ///// <summary>
-            ///// The above fib(n) take too long to caculate, to improve performance, using memoization by adding extra paramenter, using Dictionary as look up table to reduce redundance steps. 
+            ///// The above fib(n) take too long to caculate, to improve performance, using memoization by adding extra paramenter, using Dictionary as look up table to reduce redundance steps.
             ///// </summary>
             ///// <param name="n"></param>
             ///// <param name="memo"></param>
@@ -142,21 +128,16 @@ namespace DynamicProgramming
             //public static long FibMemo(int n, Dictionary<int, long>  memo)
             //{
             //    //return to the recursive call if exist. but not to the caller.
-            //    if (memo.ContainsKey(n)) 
+            //    if (memo.ContainsKey(n))
             //        return memo[n];
-            //    //base case 
+            //    //base case
             //    if (n == 0) return 0;
             //    if (n == 1) return 1;
             //    //store memo
-            //    memo[n] = FibMemo(n - 1, memo) + FibMemo(n - 2,  memo);  
+            //    memo[n] = FibMemo(n - 1, memo) + FibMemo(n - 2,  memo);
             //    return memo[n];
             //}
             //#endregion Fibonacci sequence
-
-
-
-
         }
-
     }
 }
