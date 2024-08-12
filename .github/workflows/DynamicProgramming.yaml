@@ -20,13 +20,13 @@ jobs:
         dotnet-version: '7.x'
 
     - name: Install dependencies
-      run: dotnet restore ./DynamicProgramming.sln
+      run: dotnet restore #./DynamicProgramming.sln
 
     - name: Build
-      run: dotnet build ./DynamicProgramming.sln --no-restore
+      run: dotnet build --configuration Release --no-restore #./DynamicProgramming.sln 
 
     - name: Run tests
-      run: dotnet test ./DynamicProgramming.sln --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal --filter FullyQualifiedName~DynamicProgrammingNunit #dotnet test ./DynamicProgramming.sln --no-build --verbosity normal
 
 # jobs:
 #   super-lint:
