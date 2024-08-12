@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackAndQueue", "..\StackAn
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{50C9A753-C71C-4E8C-9691-C103123C050F}"
 	ProjectSection(SolutionItems) = preProject
+		..\DynamicProgrammingNunit\.gitignore = ..\DynamicProgrammingNunit\.gitignore
 		.github\workflows\DynamicProgramming.yaml = .github\workflows\DynamicProgramming.yaml
+		Readme.txt = Readme.txt
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicProgrammingNunit", "..\DynamicProgrammingNunit\DynamicProgrammingNunit.csproj", "{8D71915C-0D26-4C98-9C4B-539B663C87A7}"
